@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/product.css">
+    <title>products</title>
+</head>
+
+<body>
+    <header class="header">
+
+        <input class="menu-btn" type="checkbox" id="menu-btn" />
+        <label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
+        <ul class="menu">
+            <li><a href="#work">Our Work</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#careers">Careers</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </header>
+
+    <div class="container">
+        <div class="subnav">
+            <ul class="menu">
+                <span>ALL CATEGORIES</span>
+                <li><a href="#work">Our Work</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#careers">Careers</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+        <div class="gap"></div>
+
+
+        <div class="product-section">
+            <div class="sort">
+                <ul>
+                    <div id="ul-gap" class="gap"></div>
+                    <li class="list-title">by product
+                        <ul>
+                            <li>abs</li>
+                            <li>abs</li>
+                            <li>abs</li>
+                        </ul>
+                    </li>
+                    <div id="ul-gap" class="gap"></div>
+                    <li>by category
+                        <ul>
+                            <li>xyz</li>
+                            <li>xyz</li>
+                            <li>xyz</li>
+                        </ul>
+                    </li>
+                    <div id="ul-gap" class="gap"></div>
+                    <li>by price
+                        <div class="price-range">
+                            <input type="range" min="0" max="10000" value="0" id="priceSlider">
+                            <div class="price-values">
+
+                                <span id="maxPrice">Max: $1000</span>
+                            </div>
+                    </li>
+                    <div id="ul-gap" class="gap"></div>
+                </ul>
+            </div>
+            
+            <div class="product-list">
+              <div class="product-card">
+                <div class="product-image">
+                  <img src="https://atlas-content-cdn.pixelsquid.com/stock-images/bodybuilding-supplements-supplement-aq3mzr9-600.jpg" alt="Product Image">
+                </div>
+                <div class="product-details">
+                  <h3 class="product-title">Product Title</h3>
+                  <p class="product-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                  <div class="product-prices">
+                    <span class="original-price">$50</span>
+                    <span class="offer-price">$40</span>
+                  </div>
+                  <p class="product-information">Product information goes here...</p>
+                  <a href="#" class="view-details">View Details</a>
+                  <button class="add-to-cart">Add to Cart</button>
+                </div>
+              </div>
+              <div class="product-card">
+                <div class="product-image">
+                  <img src="https://atlas-content-cdn.pixelsquid.com/stock-images/bodybuilding-supplements-supplement-aq3mzr9-600.jpg" alt="Product Image">
+                </div>
+                <div class="product-details">
+                  <h3 class="product-title">Product Title</h3>
+                  <p class="product-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                  <div class="product-prices">
+                    <span class="original-price">$50</span>
+                    <span class="offer-price">$40</span>
+                  </div>
+                  <p class="product-information">Product information goes here...</p>
+                  <a href="#" class="view-details">View Details</a>
+                  <button class="add-to-cart">Add to Cart</button>
+                </div>
+              </div>
+              <div class="product-card">
+                <div class="product-image">
+                  <img src="https://atlas-content-cdn.pixelsquid.com/stock-images/bodybuilding-supplements-supplement-aq3mzr9-600.jpg" alt="Product Image">
+                </div>
+                <div class="product-details">
+                  <h3 class="product-title">Product Title</h3>
+                  <p class="product-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                  <div class="product-prices">
+                    <span class="original-price">$50</span>
+                    <span class="offer-price">$40</span>
+                  </div>
+                  <p class="product-information">Product information goes here...</p>
+                  <a href="#" class="view-details">View Details</a>
+                  <button class="add-to-cart">Add to Cart</button>
+                </div>
+              </div>
+              <div class="product-card">
+                <div class="product-image">
+                  <img src="https://atlas-content-cdn.pixelsquid.com/stock-images/bodybuilding-supplements-supplement-aq3mzr9-600.jpg" alt="Product Image">
+                </div>
+                <div class="product-details">
+                  <h3 class="product-title">Product Title</h3>
+                  <p class="product-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                  <div class="product-prices">
+                    <span class="original-price">$50</span>
+                    <span class="offer-price">$40</span>
+                  </div>
+                  <p class="product-information">Product information goes here...</p>
+                  <a href="#" class="view-details">View Details</a>
+                  <button class="add-to-cart">Add to Cart</button>
+                </div>
+              </div>
+              
+            </div>
+        </div>
+    </div>
+    <script>const priceSlider = document.getElementById('priceSlider');
+
+        const maxPrice = document.getElementById('maxPrice');
+
+        priceSlider.addEventListener('input', () => {
+            const selectedPrice = parseInt(priceSlider.value);
+
+            maxPrice.textContent = `Max: $${selectedPrice}`;
+        });
+
+        const toggleLayoutButton = document.getElementById('toggleLayout');
+const productList = document.querySelector('.product-list');
+
+toggleLayoutButton.addEventListener('click', function() {
+  productList.classList.toggle('horizontal-layout');
+});
+
+    </script>
+
+    
+</body>
+
+</html>

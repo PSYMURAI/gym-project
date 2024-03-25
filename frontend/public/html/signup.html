@@ -4,6 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="../css/signup.css">
     <title>sign in </title>
 </head>
@@ -28,33 +31,65 @@
             <div class="title">
                 <h2>SIGN UP</h2>
                 <a href="#">Already have Account ?<br>
-                       Sign in</a>
+                    Sign in</a>
             </div>
             <div class="container">
+
+                <form action="#" method="post" onsubmit="return validateForm()"></form>
                 
-                <form action="#" method="post">
-                    <label for="Name"><b>Enter Name</b></label>
-                    <input type="text" placeholder="Enter name" name="name" required>
+                <label for="Name"><b>Enter Name</b></label>
+                <div style="margin-bottom: 20px; display: flex;">
+                    <input id="name" type="text" placeholder="Enter first name    middle name    last name" name="name" onkeyup="validateName()" required>
+                    <span class="error" id="name-error"></span> <br>
+                </div>
 
-                    <label for="number"><b>Enter Contact Number</b></label>
-                    <input type="text" placeholder="Enter Contact Number" name="number" required>
+
+                
+                <label for="number"><b>Enter Contact Number</b></label>
+                <div style="margin-bottom: 20px; display: flex;">
+                    <input id="mobile" type="tel" placeholder="Enter Contact Number"  pattern="[0-9]*" maxlength="10" name="number"
+                        onkeyup="validateContact()" required>
+                    <span class="error" id="mobile-error"></span>
+                </div>
 
 
-                    <label for="email"><b>Enter email address</b></label>
-                    <input type="email" placeholder="Enter Email" name="email" required>
-            
-                    <label for="psw"><b>Enter Password</b></label>
-                    <input type="password" placeholder="Enter Password" name="psw" required>
-            
-                    <input type="submit" value="Login">
 
-                    </div>
-                </form>
+                
+                <label for="email"><b>Enter email address</b></label>
+                <div style="margin-bottom: 20px; display: flex;">
+                    <input id="email" type="email" placeholder="Enter Email" name="email" onkeyup="validateEmail()"
+                        required>
+                    <span class="error" id="email-error"></span>
+
+                </div>
+
+                
+                <label for="psw"><b>Enter Password</b></label>
+                <div style="margin-bottom: 20px; display: flex;">
+                    <input id="pass" type="password" placeholder="Enter Password    (min 8 characters)"  onkeyup="validatePass()"
+                        name="psw" required>
+                    <span class="error" id="pass-error"></span>
+                </div>
+
+
+                
+                <label for="cnfpsw"><b>Enter Password</b></label>
+                <div style="margin-bottom: 20px; display: flex;">
+                    <input id="cnfpass" type="password" placeholder="confirm Password" name="cnfpsw" onkeyup="confirmPass()" required>
+                    <span class="error" id="cnpass-error"></span>
+                </div>
+
+                <input type="submit" value="Login" onclick="validateform()">
+
             </div>
+            </form>
         </div>
-        
+    </div>
+
 
     </div>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="../js/signin.js"></script>
 </body>
 
 </html>
