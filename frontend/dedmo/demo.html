@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Zigzag Text</title>
+<style>
+    .zigzag-text {
+        font-size: 36px;
+        font-weight: bold;
+        text-transform: uppercase;
+        position: relative;
+    }
+
+    .zigzag-text::before {
+        content: 'S';
+        position: absolute;
+        top: 0;
+        left: 0;
+        transform: translateY(-50%);
+        animation: zigzag 1s infinite alternate;
+    }
+
+    .zigzag-text::after {
+        content: 'E';
+        position: absolute;
+        top: 0;
+        right: 0;
+        transform: translateY(-50%);
+        animation: zigzag 1s 0.5s infinite alternate;
+    }
+
+    @keyframes zigzag {
+        0% { transform: translateY(-50%); }
+        100% { transform: translateY(-70%); }
+    }
+</style>
+</head>
+<body>
+
+<div class="zigzag-text">AL</div>
+
+</body>
+</html>
