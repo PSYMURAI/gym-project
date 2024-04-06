@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/checkout.css">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@10">
+    </link>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+</head>
+
+<body>
+
+    <body>
+        <div class="main">
+
+            <div class="stepper">
+
+                <div class="progress-container">
+                    <div class="progress" id="progress"></div>
+                    <div class="circle active">1</div>
+                    <div class="circle">2</div>
+                    <div class="circle">3</div>
+
+                </div>
+            </div>
+            <div class="container">
+                <div class="step-container active">
+                    <div class="step" style="background-color: lightblue; ">
+                        <h3>user details </h3>
+                    </div>
+                </div>
+            </div>
+            <div class="step-container">
+                <div class="step" style="background-color: lightcoral;">
+
+                    <h3>Billing </h3>
+                    <a id="payLink" href="payment.html">GOT TO GATEWAY</a>
+
+
+                </div>
+            </div>
+            <div class="step-container">
+                <div class="step">
+                    <div class="successful-container">
+                        <div class="tick">
+
+
+                           
+
+                            <svg class="checkmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52">
+                                <circle class="checkmark__circle" cx="26" cy="26" r="25" fill="none" stroke="#73AF55"
+                                    stroke-width="2" />
+                                <path class="checkmark__check" fill="none" stroke="#73AF55" stroke-width="2"
+                                    d="M14.1 27.2l7.1 7.2 16.7-16.8" />
+                            </svg>
+                  
+
+
+
+                            <h2>thank you ! your product will be delivered to your address</h2>
+
+                            <form action="/clear" method="post">
+                                <div class="btn-wrapper">
+
+                                    <input type="submit" value="Continue" class="submit-button">
+                                </div>
+                            </form>
+
+
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+        <div class="buttons">
+
+
+
+            <button class="btn" id="prev" disabled>Prev</button>
+            <button class="btn" id="next">Next</button>
+        </div>
+        </div>
+
+        <script src="../js/checkout.js"></script>
+
+    </body>
+
+</html>
